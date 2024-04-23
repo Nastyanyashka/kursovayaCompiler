@@ -548,7 +548,7 @@ namespace GUICompiler
         private void Code(object sender, RoutedEventArgs e)
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"https://github.com/Nikonoffcmi/Compiler")
+            p.StartInfo = new ProcessStartInfo(@"https://github.com/Nastyanyashka/kursovayaCompiler")
             {
                 UseShellExecute = true
             };
