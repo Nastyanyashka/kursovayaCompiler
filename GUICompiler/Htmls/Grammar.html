@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>
+        Грамматика
+    </h1>
+    <p>
+        Определим грамматику служебного слова Dictionary на языке C# G[<DEF>] в нотации Хомского с продукциями P:
+    </p>
+    <p>
+        1. < DEF > -> ‘Dictionary’ < DICTIONARY ><br />
+        2. < DICTIONARY > -> ‘<’ < TYPEKEY ><br />
+        3. < TYPEKEY > -> (int|string) < COMMA ><br />
+        4. < COMMA > -> ‘,’ < TYPEVALUE ><br />
+        5. < TYPEVALUE > -> (int|string) < CLOSE ><br />
+        6. < CLOSE > -> ‘>‘ < ID ><br />
+        7. < ID > -> (letter|’_’) < IDREM ><br />
+        8. < IDREM > -> (letter|’_’|digit) < IDREM ><br />
+        9. < IDREM > -> ‘=’ < ASSIGNTMENT ><br />
+        10. < ASSIGNTMENT > -> ‘new’ < NEW ><br />
+        11. < NEW > -> ‘Dictionary’ < DICTIONARY2 ><br />
+        12. < DICTIONARY2 > -> ‘<’ < TYPEKEY2 ><br />
+        13. < TYPEKEY2 > -> (int|string) < COMMA2 ><br />
+        14. < COMMA2 > -> ‘,’ < TYPEVALUE2 ><br />
+        15. < TYPEVALUE2 > -> (int|string) < CLOSE2 ><br />
+        16. < CLOSE2 > -> ‘>’ < RBRACKET ><br />
+        17. < RBRACKET > -> ‘(’ < LBRACKET ><br />
+        18. < LBRACKET > -> ‘)’ < END><br />
+        19. < END > -> ‘;’<br />
+         < letter > → "a" | "b" | "c" | ... | "z" | "A" | "B" | "C" | ... | "Z" |<br />
+         < digit > → "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"<br />
+            
+    </p>
+    <p>
+        Следуя введенному формальному определению грамматики, представим G[< DEF >] ее составляющими:<br />
+            •	Z = G[< DEF >] ;<br />
+            •	VT = {a, b, c, ..., z, A, B, C, ..., Z, ;, ., 0, 1, 2, ..., 9};<br />
+            •	VN = {< DEF >, < DICTIONARY >, < TYPEKEY >, < COMMA >,     < TYPEVALUE >, < CLOSE >, < ID >, < IDREM >, < ASSIGNTMENT >,            < NEW >, < DICTIONARY2>, < TYPEKEY2>, < COMMA2>, < TYPEVALUE2 >, < CLOSE2 >, < RBRACKET >, < LBRACKET >, < END > ,< letter >, < digit >}. <br />
+            
+    </p>
+</body>
+</html>
